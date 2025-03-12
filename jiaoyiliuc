@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="trading_flow" name="VNPy Trading Flow">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Start -->
+        <mxCell id="start" value="Start" style="start;fillColor=#99ccff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="80" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Initialize VNPy -->
+        <mxCell id="initialize" value="Initialize VNPy" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Load Config -->
+        <mxCell id="load_config" value="Load Config" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Connect Gateway -->
+        <mxCell id="connect_gateway" value="Connect Gateway" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Subscribe Market Data -->
+        <mxCell id="subscribe_market" value="Subscribe Market Data" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="700" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Strategy Initialization -->
+        <mxCell id="strategy_init" value="Strategy Initialization" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Processing -->
+        <mxCell id="data_processing" value="Data Processing" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="240" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Generate Signal -->
+        <mxCell id="generate_signal" value="Generate Signal" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="400" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Execute Order -->
+        <mxCell id="execute_order" value="Execute Order" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="560" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Risk Management -->
+        <mxCell id="risk_management" value="Risk Management" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="720" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- End -->
+        <mxCell id="end" value="End" style="end;fillColor=#99ccff;" vertex="1" parent="1">
+          <mxGeometry x="720" y="240" width="80" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="conn1" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="start" target="initialize">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="initialize" target="load_config">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="load_config" target="connect_gateway">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn4" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="connect_gateway" target="subscribe_market">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn5" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="subscribe_market" target="strategy_init">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn6" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="strategy_init" target="data_processing">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn7" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="data_processing" target="generate_signal">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn8" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="generate_signal" target="execute_order">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn9" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="execute_order" target="risk_management">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn10" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="risk_management" target="end">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
