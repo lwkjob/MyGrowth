@@ -1,10 +1,121 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.1.0">
-  <diagram name="第 1 页" id="41S0wLrP_sGHIkxieBIt">
-    <mxGraphModel>
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-03-12T12:00:00.000Z" agent="Mozilla/5.0" version="21.1.8" type="device">
+  <diagram id="sentiment_analysis_system" name="Sentiment Analysis System">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Config Class -->
+        <mxCell id="config_class" value="Config&#xa;------------------&#xa;+ embed_size: int&#xa;+ hidden_size: int&#xa;+ output_size: int&#xa;+ batch_size: int&#xa;+ learning_rate: float&#xa;+ num_epochs: int&#xa;+ dropout: float&#xa;+ max_vocab_size: int&#xa;+ max_seq_length: int&#xa;+ validation_split: float&#xa;------------------&#xa;+ save(path: str)&#xa;+ load(path: str)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="200" height="240" as="geometry"/>
+        </mxCell>
+        
+        <!-- TextPreprocessor Class -->
+        <mxCell id="preprocessor_class" value="TextPreprocessor&#xa;------------------&#xa;+ word_to_idx: Dict&#xa;+ idx_to_word: Dict&#xa;+ stop_words: Set&#xa;------------------&#xa;+ preprocess_text()&#xa;+ build_vocab()&#xa;+ text_to_sequence()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="200" height="180" as="geometry"/>
+        </mxCell>
+        
+        <!-- ImprovedTextClassifier Class -->
+        <mxCell id="classifier_class" value="ImprovedTextClassifier&#xa;------------------&#xa;+ embedding: nn.Embedding&#xa;+ lstm: nn.LSTM&#xa;+ attention: nn.Sequential&#xa;+ dropout: nn.Dropout&#xa;+ fc1: nn.Linear&#xa;+ fc2: nn.Linear&#xa;------------------&#xa;+ forward()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="200" height="200" as="geometry"/>
+        </mxCell>
+        
+        <!-- Main Process Flow -->
+        <mxCell id="process_flow" value="Main Process Flow" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="720" height="400" as="geometry"/>
+        </mxCell>
+        
+        <!-- Process Steps -->
+        <mxCell id="step1" value="1. Load IMDB Dataset" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="process_flow">
+          <mxGeometry x="20" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="step2" value="2. Initialize Config &amp; Preprocessor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="process_flow">
+          <mxGeometry x="200" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="step3" value="3. Build Vocabulary" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="process_flow">
+          <mxGeometry x="380" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="step4" value="4. Convert Texts to Sequences" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="process_flow">
+          <mxGeometry x="540" y="40" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="step5" value="5. Create DataLoader" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="process_flow">
+          <mxGeometry x="20" y="100" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="step6" value="6. Initialize Model" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="process_flow">
+          <mxGeometry x="200" y="100" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="step7" value="7. Train Model" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="process_flow">
+          <mxGeometry x="380" y="100" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="step8" value="8. Save Model" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="process_flow">
+          <mxGeometry x="540" y="100" width="160" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Training Process -->
+        <mxCell id="training_process" value="Training Process" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="process_flow">
+          <mxGeometry x="20" y="160" width="680" height="220" as="geometry"/>
+        </mxCell>
+        
+        <!-- Training Steps -->
+        <mxCell id="train_step1" value="Forward Pass" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="training_process">
+          <mxGeometry x="20" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="train_step2" value="Calculate Loss" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="training_process">
+          <mxGeometry x="160" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="train_step3" value="Backward Pass" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="training_process">
+          <mxGeometry x="300" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="train_step4" value="Optimize" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="training_process">
+          <mxGeometry x="440" y="40" width="120" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="train_step5" value="Evaluate" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="training_process">
+          <mxGeometry x="580" y="40" width="80" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Model Architecture -->
+        <mxCell id="model_arch" value="Model Architecture" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="training_process">
+          <mxGeometry x="20" y="100" width="640" height="100" as="geometry"/>
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step1" target="step2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step2" target="step3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step3" target="step4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="step5" target="step6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step6" target="step7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step7" target="step8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
       </root>
     </mxGraphModel>
   </diagram>
-</mxfile>
+</mxfile> 
