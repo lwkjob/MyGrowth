@@ -1,9 +1,52 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.1.0">
-  <diagram name="第 1 页" id="BBsH47tGcZTEvvqrDDiO">
-    <mxGraphModel>
+<mxfile host="app.diagrams.net">
+  <diagram id="architecture" name="VNPy Architecture">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff">
       <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Main Engine -->
+        <mxCell id="main_engine" value="Main Engine&#xa;------------------&#xa;+ add_gateway()&#xa;+ add_app()&#xa;+ connect()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="200" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- Event Engine -->
+        <mxCell id="event_engine" value="Event Engine&#xa;------------------&#xa;+ start()&#xa;+ stop()&#xa;+ put(event)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="200" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Engine -->
+        <mxCell id="data_engine" value="Data Engine&#xa;------------------&#xa;+ load_data()&#xa;+ save_data()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="200" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- Risk Manager -->
+        <mxCell id="risk_manager" value="Risk Manager&#xa;------------------&#xa;+ set_position_limit()&#xa;+ set_order_limit()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="200" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- CTA Strategy -->
+        <mxCell id="cta_strategy" value="CTA Strategy&#xa;------------------&#xa;+ on_init()&#xa;+ on_bar()&#xa;+ on_order()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="200" height="120" as="geometry"/>
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="conn1" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="main_engine" target="event_engine">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="main_engine" target="data_engine">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="main_engine" target="risk_manager">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn4" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="main_engine" target="cta_strategy">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
       </root>
     </mxGraphModel>
   </diagram>
