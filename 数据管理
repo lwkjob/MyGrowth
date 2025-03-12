@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="data_management" name="VNPy Data Management">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Start -->
+        <mxCell id="start" value="Start" style="start;fillColor=#99ccff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="80" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Initialize Data Manager -->
+        <mxCell id="initialize_data" value="Initialize Data Manager" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Load Historical Data -->
+        <mxCell id="load_historical" value="Load Historical Data" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Subscribe Real-time Data -->
+        <mxCell id="subscribe_realtime" value="Subscribe Real-time Data" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Processing -->
+        <mxCell id="data_processing" value="Data Processing" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Store Data -->
+        <mxCell id="store_data" value="Store Data" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Analysis -->
+        <mxCell id="data_analysis" value="Data Analysis" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="360" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Strategy Backtesting -->
+        <mxCell id="strategy_backtest" value="Strategy Backtesting" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="520" y="140" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- End -->
+        <mxCell id="end" value="End" style="end;fillColor=#99ccff;" vertex="1" parent="1">
+          <mxGeometry x="520" y="240" width="80" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="conn1" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="start" target="initialize_data">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="initialize_data" target="load_historical">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="load_historical" target="subscribe_realtime">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn4" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="subscribe_realtime" target="data_processing">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn5" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="data_processing" target="store_data">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn6" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="store_data" target="data_analysis">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn7" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="data_analysis" target="strategy_backtest">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn8" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="strategy_backtest" target="end">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
