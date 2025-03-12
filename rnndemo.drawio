@@ -91,31 +91,31 @@
         </mxCell>
         
         <!-- Connections -->
-        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step1" target="step2">
+        <mxCell id="conn1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step1" target="step2">
           <mxGeometry width="50" height="50" relative="1" as="geometry"/>
         </mxCell>
         
-        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step2" target="step3">
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step2" target="step3">
           <mxGeometry width="50" height="50" relative="1" as="geometry"/>
         </mxCell>
         
-        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step3" target="step4">
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step3" target="step4">
           <mxGeometry width="50" height="50" relative="1" as="geometry"/>
         </mxCell>
         
-        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="step5" target="step6">
+        <mxCell id="conn4" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="step5" target="step6">
           <mxGeometry width="50" height="50" relative="1" as="geometry"/>
         </mxCell>
         
-        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step6" target="step7">
+        <mxCell id="conn5" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step6" target="step7">
           <mxGeometry width="50" height="50" relative="1" as="geometry"/>
         </mxCell>
         
-        <mxCell id="" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step7" target="step8">
+        <mxCell id="conn6" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="step7" target="step8">
           <mxGeometry width="50" height="50" relative="1" as="geometry"/>
         </mxCell>
         
       </root>
     </mxGraphModel>
   </diagram>
-</mxfile> 
+</mxfile>
