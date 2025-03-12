@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="risk_management" name="VNPy Risk Management">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Start -->
+        <mxCell id="start" value="Start" style="start;fillColor=#99ccff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="80" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Initialize Risk Manager -->
+        <mxCell id="initialize_risk" value="Initialize Risk Manager" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Set Risk Parameters -->
+        <mxCell id="set_parameters" value="Set Risk Parameters" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Monitor Positions -->
+        <mxCell id="monitor_positions" value="Monitor Positions" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Check Orders -->
+        <mxCell id="check_orders" value="Check Orders" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Execute Risk Controls -->
+        <mxCell id="execute_controls" value="Execute Risk Controls" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="160" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Generate Reports -->
+        <mxCell id="generate_reports" value="Generate Reports" style="process;fillColor=#ffcc99;" vertex="1" parent="1">
+          <mxGeometry x="400" y="140" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- End -->
+        <mxCell id="end" value="End" style="end;fillColor=#99ccff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="240" width="80" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="conn1" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="start" target="initialize_risk">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="initialize_risk" target="set_parameters">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="set_parameters" target="monitor_positions">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn4" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="monitor_positions" target="check_orders">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn5" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="check_orders" target="execute_controls">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn6" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="execute_controls" target="generate_reports">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="conn7" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="generate_reports" target="end">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
